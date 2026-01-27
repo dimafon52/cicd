@@ -1,0 +1,51 @@
+[project]
+name = "cicd"
+version = "0.1.0"
+description = "Python library"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "difonlib",
+]
+
+[tool.uv]
+package = true
+
+[tool.mypy]
+# 🧩 Проверяем только свой код
+ignore_missing_imports = true
+follow_imports = "silent"
+no_site_packages = true
+
+# 🚫 Строгие правила для собственного кода
+disallow_untyped_defs = true
+warn_unused_ignores = true
+warn_return_any = true
+
+# 📦 Если проект лежит в src/
+mypy_path = ["src"]
+
+
+[tool.pytest.ini_options]
+# Add '-s' if during test used input(".....")
+addopts = "-v"
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "ruff>=0.6.0",
+    "black>=24.8.0",
+    "mypy>=1.11.0",
+    "twine>=5.1.1", 
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.black]
+line-length = 100
+
+[tool.uv.sources]
+difonlib = { git = "ssh://git@bitbucket.org/dimafon_devel/difonlib.git" }
+
