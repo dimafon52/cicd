@@ -12,7 +12,7 @@ from cicd.main import main as _main
 
 
 def test_log_dbg():
-    logdbg("hello 12345")
+    logdbg("hello 12345 000")
     assert True
 
 
