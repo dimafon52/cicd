@@ -9,7 +9,6 @@ dbg = logdbg
 
 def main() -> int:
     dbg("Hello 1 from cicd!")
-    dbg("Hello 2 from cicd!")
     return 0
 
 
