@@ -47,5 +47,6 @@ line-length = 100
 line-length = 100
 
 [tool.uv.sources]
-difonlib = { git = "ssh://git@bitbucket.org/dimafon_devel/difonlib.git" }
+# difonlib = { git = "ssh://git@bitbucket.org/dimafon_devel/difonlib.git" }
+difonlib = { git = "https://bitbucket.org/dimafon_devel/difonlib.git" }
 
